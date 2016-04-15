@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="dbsys:war exploded">
+    <output-path>$PROJECT_DIR$/target/dbsys</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="dbsys" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/dbsys/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="dbsys/web/Web" />
+    </root>
+  </artifact>
+</component>
