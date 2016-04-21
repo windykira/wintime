@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.baiten.dao.CustomerDao">
+    <resultMap id="BaseResultMap" type="com.baiten.entity.Customer" >
+        <result column="id" property="id" jdbcType="INTEGER" />
+        <result column="name" property="name" jdbcType="VARCHAR" />
+        <result column="phone" property="phone" jdbcType="VARCHAR" />
+        <result column="address" property="address" jdbcType="VARCHAR" />
+    </resultMap>
+
+    <select id="getCustomerById" parameterType="int" resultMap="BaseResultMap">
+        select * from tbl_customer where id=#{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="getAllCustomers" resultMap="BaseResultMap">
+        select * from tbl_customer
+    </select>
+
+    <insert id="saveCustomer" useGeneratedKeys="true" keyProperty="id" parameterType="com.baiten.entity.Customer">
+        insert into tbl_customer(name,phone,address)
+        values(#{name},#{phone},#{address})
+    </insert>
+
+
+</mapper>
