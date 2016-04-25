@@ -11,12 +11,12 @@ public interface CustomerDao {
 
     /**
      * 根据ID查询
-     * @param id
+     * @param customerID
      * @return
      */
-    public Customer getCustomerById(int id);
+     Customer getCustomerById(Long customerID);
 
-    public List<Customer> getAllCustomers();
+     List<Customer> getAllCustomers();
 
-    public Integer saveCustomer(Customer customer);
+     Long saveCustomer(Customer customer);
 }
